@@ -1,0 +1,1 @@
+window.CURRICULUM_AREAS=[["Lenguaje",[1,3]],["Matemáticas",[2,1,4]],["Ciencias Naturales",[0,2,4]],["Ciencias Sociales",[3,1,4]],["Educación Artística",[1,2]],["Ética y valores",[0,3,4]],["Educación Religiosa",[0,1,3,4]],["Educación Física",[2,3,4]],["Tecnología e Informática",[0,1,4]],["Inglés",[0,1,4]]];
