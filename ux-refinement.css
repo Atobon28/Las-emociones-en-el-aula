@@ -1,0 +1,94 @@
+/* UX para docentes de todas las edades — 2026 */
+:root{--ux-navy:#122352;--ux-blue:#244db0;--ux-focus:#efaa24}
+html{scroll-padding-top:105px}
+main{display:flex;flex-direction:column}
+main>.hero{order:0}
+main>.wave{order:1}
+main>#explorar{order:2}
+main>#como{order:3}
+main>#ejes{order:4}
+main>#ruta{order:5}
+main>#ejemplos{order:6}
+main>#recursos{order:7}
+main>#proyecto{order:8}
+#explorar{padding-top:65px;padding-bottom:90px;background:#f4f7ff}
+#explorar .section-head{margin-bottom:22px}
+#explorar .section-head h2{font-size:clamp(36px,4.5vw,56px)}
+#explorar .section-head p{max-width:650px}
+#explorar .quick-help{margin-bottom:24px}
+.explorer{border:2px solid #d9e2f5}
+.explorer-sidebar{background:#fcfdff}
+#explorar .explorer-sidebar h3{font-size:26px}
+.formfield select{background-color:#fff}
+.formfield select:hover{border-color:#3863b1}
+#consultar{font-size:17px;min-height:58px}
+#results .result{border:1.5px solid #dbe4f2;align-items:start;background:#fff}
+#results .result h4{font-size:21px;letter-spacing:-.02em}
+#results .result p{font-size:16px;color:#263656;font-weight:600}
+#results .result small{display:block;margin:10px 0;color:#50607c;font-size:14px}
+#results .result .linkmore{font-size:15px;font-weight:800;background:#f0f4ff;border-radius:11px;padding:9px 14px;text-decoration:none;color:#1c4298}
+#results .result .linkmore:hover{background:#e4edff}
+#results .result:focus-within{border-color:#2452af}
+#resultDesc{max-width:610px}
+.notice{line-height:1.7}
+.axis{cursor:pointer;min-height:235px}
+.axis:hover{border-color:#3c66c2}
+.axis:focus-visible{outline:3px solid var(--ux-focus);outline-offset:3px}
+.feature,.step,.example{box-shadow:none}
+#como{padding-top:80px}
+#como .feature{min-height:185px}
+#ruta .step{min-height:220px}
+#ejemplos .example{min-height:390px}
+.hero-art{pointer-events:none}
+.hero-actions .button{font-size:16px;min-height:56px}
+.hero-small{font-size:13px}
+a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(--ux-focus);outline-offset:4px}
+#orientacionesResultado{scroll-margin-top:105px}
+#resultTitle:focus{outline:none}
+.help-list{margin-top:18px;background:#fff9e4;border:1px solid #f3dda0;border-radius:14px;padding:16px 18px;color:#514523}
+.help-list strong{display:block;font-size:15px}
+.help-list p{font-size:14px;line-height:1.65;margin:5px 0 0}
+.explorer-progress{font-size:13px;font-weight:800;color:#38528b;margin:12px 0 0}
+#no-results{padding:20px;background:#f4f6fc;border-radius:15px}
+.tip{background:#f1eaff}
+@media(min-width:721px) and (max-width:1080px){
+ .navlinks{gap:13px}
+ .navlinks a{font-size:12px}
+ .hero-grid{padding-top:44px;padding-bottom:42px}
+}
+@media(max-width:900px){
+ #explorar{padding-top:58px}
+ .explorer-sidebar{display:block}
+ .explorer-sidebar .formfield{max-width:none}
+ .explorer-sidebar .button{width:100%}
+}
+@media(max-width:720px){
+ html{scroll-padding-top:82px}
+ .hero-grid{padding-top:40px}
+ .hero-art{max-width:100%;overflow:hidden}
+ #explorar{padding:50px 0 70px}
+ #explorar .section-head h2{font-size:36px}
+ #explorar .section-head p{font-size:16px}
+ .quick-help{display:flex;align-items:flex-start;gap:10px}
+ .quick-help>div{font-size:13px;line-height:1.3}
+ .explorer-sidebar,.explorer-body{padding:22px 19px}
+ .explorer-sidebar .formfield label{font-size:16px}
+ .explorer-sidebar select{min-height:56px}
+ #results .result{grid-template-columns:44px minmax(0,1fr);padding:15px;gap:11px}
+ #results .result h4{font-size:18px}
+ #results .result p{font-size:15px}
+ #results .result .linkmore{width:100%;justify-content:center}
+ #resultTitle{font-size:26px}
+ .axes{gap:12px}
+ .axis{min-height:initial}
+ .axis-detail{gap:14px}
+ .dialog .modal{max-height:88dvh}
+}
+@media(max-width:420px){
+ .quick-help{display:grid;grid-template-columns:1fr}
+ .quick-arrow{display:none}
+ #explorar .section-head h2{font-size:33px}
+ .hero-actions .button{width:100%}
+ .navlinks a{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button:hover,.axis:hover,.resource-card:hover{transform:none}}
