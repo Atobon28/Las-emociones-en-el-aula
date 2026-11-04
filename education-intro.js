@@ -1,0 +1,1 @@
+window.EDUCATION_INTRO='La educación socioemocional fortalece el reconocimiento emocional, la convivencia y las decisiones responsables.';
