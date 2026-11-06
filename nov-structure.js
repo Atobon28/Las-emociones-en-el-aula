@@ -1,0 +1,23 @@
+(function(){
+const hero=document.querySelector('#inicio');
+if(hero){
+ const kicker=hero.querySelector('.eyebrow');if(kicker)kicker.textContent='LAS EMOCIONES EN EL AULA · EDUCACIÓN PRIMARIA';
+ const lead=hero.querySelector('.lead');if(lead)lead.textContent='Esta propuesta de diseño curricular fortalece la educación socioemocional mediante la integración de cinco ejes en las diferentes áreas del conocimiento. Descubre cómo llevarlos a tus clases sin añadir actividades aisladas.';
+ const actions=hero.querySelector('.hero-actions');
+ if(actions){const first=actions.querySelector('a');if(first){first.href='#ejes';first.textContent='Conocer los cinco ejes →'}const second=actions.querySelectorAll('a')[1];if(second){second.href='#explorar';second.textContent='Explorar por grado y área';}}
+ const extra=document.createElement('a');extra.className='hero-guide-link';extra.href='/orientaciones.html';extra.textContent='Consultar la guía de orientaciones →';
+ hero.querySelector('.hero-small')?.before(extra);
+}
+const intro=document.querySelector('#introduccion .container');
+if(intro){
+ intro.innerHTML='<div class="intro-grid"><div><div class="kicker">PARA COMPRENDER LA PROPUESTA</div><h2>Las emociones también se aprenden.</h2><p>La educación socioemocional es un proceso educativo continuo que ayuda a reconocer, expresar y regular las emociones, comprender a los demás y tomar decisiones responsables.</p><p>Su integración en las clases favorece el bienestar, la convivencia y la formación integral. No se trata de sumar tareas, sino de aprovechar oportunidades que ya aparecen al enseñar.</p><div class="intro-laws"><strong>¿Qué la respalda en Colombia?</strong><p>La Ley 2491 de 2025 impulsa las competencias socioemocionales en los proyectos educativos institucionales. La Ley 2503 de 2025 crea la Cátedra de Educación Emocional.</p></div></div><div class="feelings-panel"><div class="feelings-heading">Todas las emociones tienen un lugar</div><div class="moods"><div class="mood mood-yellow"><span aria-hidden="true">😊</span><b>Alegría</b></div><div class="mood mood-lilac"><span aria-hidden="true">😔</span><b>Tristeza</b></div><div class="mood mood-pink"><span aria-hidden="true">😠</span><b>Enojo</b></div><div class="mood mood-blue"><span aria-hidden="true">😮</span><b>Sorpresa</b></div><div class="mood mood-mint"><span aria-hidden="true">😌</span><b>Calma</b></div></div><p>Reconocer lo que sentimos es el primer paso para comprendernos y convivir.</p></div></div>';
+}
+const axes=document.getElementById('ejes');
+if(axes){
+ const tail=axes.querySelector('.container');const bar=document.createElement('div');bar.className='axis-guide-cta';bar.innerHTML='<div><strong>¿Quieres profundizar?</strong><p>Explora la guía de orientaciones pedagógicas de esta propuesta.</p></div><a class="button" href="/orientaciones.html">Consultar guía →</a>';tail?.append(bar);
+ const buttons=axes.querySelectorAll('button.axis');buttons.forEach((b,i)=>{b.setAttribute('aria-pressed',String(b.classList.contains('active')));b.setAttribute('aria-label','Leer definición ampliada del eje '+(i+1));b.addEventListener('click',()=>buttons.forEach(x=>x.setAttribute('aria-pressed',String(x.classList.contains('active')))))});
+}
+const ruta=document.getElementById('ruta');if(ruta){const kicker=ruta.querySelector('.section-head .kicker');if(kicker)kicker.textContent='DESPUÉS DE EXPLORAR LAS ORIENTACIONES';const title=ruta.querySelector('.section-head h2');if(title)title.textContent='Cinco pasos para llevarlo a tu aula.';const text=ruta.querySelector('.section-head p');if(text)text.textContent='Una vez hayas explorado las orientaciones, sigue esta ruta flexible para integrar el aprendizaje socioemocional a tus clases sin reemplazar el propósito de la materia.';}
+const about=document.getElementById('proyecto');about?.querySelectorAll('a[href*="1V6e5PqfhyEeGDcYzv-VdV_1fJkuegOus"]').forEach(a=>a.remove());
+const nav=document.querySelector('#navlinks');if(nav){const order=['#inicio','#ejes','#explorar','#ejemplos','#ruta'];const existing=[...nav.querySelectorAll('a')];order.forEach(href=>{const a=existing.find(x=>x.getAttribute('href')===href);if(a)nav.append(a)});existing.filter(a=>!order.includes(a.getAttribute('href'))).forEach(a=>a.remove());const resources=document.createElement('a');resources.href='#recursos';resources.textContent='Documentos';resources.addEventListener('click',()=>{nav.classList.remove('open');const menu=document.querySelector('#menu');if(menu){menu.setAttribute('aria-expanded','false');menu.textContent='☰'}});nav.append(resources);}
+})();
