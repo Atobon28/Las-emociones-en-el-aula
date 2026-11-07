@@ -1,0 +1,22 @@
+/* Ajustes a partir de los comentarios académicos · noviembre 2026 */
+main>#inicio{order:0}main>.wave{order:1}main>#introduccion{order:2}main>#como{order:3;display:block!important;background:#fff;padding:80px 0}main>#ejes{order:4}main>#explorar{order:5}main>#ejemplos{order:6}main>#ruta{order:7}main>#recursos{order:8}main>#proyecto{order:9}
+#como .section-head{max-width:860px;margin-bottom:28px}#como .section-head p{max-width:720px;color:#576684;font-size:17px}
+#como .feature-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+#como .learning-step{position:relative;display:flex;align-items:flex-start;flex-direction:column;min-height:320px;padding:22px 20px 20px;background:#fff;border:1.5px solid #e3e9f6;border-radius:20px;text-decoration:none;color:#1c2d57;box-shadow:0 9px 20px #23345b07;transition:transform .18s,border-color .18s,box-shadow .18s}
+#como .learning-step:hover{transform:translateY(-3px);border-color:#95b1e7;box-shadow:0 15px 28px #23345b12}
+#como .learning-step:focus-visible{outline:3px solid #e6a82d;outline-offset:3px}
+.learning-number{font:800 12px/1 'DM Sans',sans-serif;color:#3155a0;letter-spacing:.1em}
+.learning-icon{display:grid;place-items:center;width:72px;height:72px;border-radius:22px;font-size:37px;line-height:1;margin:15px 0}
+#como .learning-step h3{font-size:21px;letter-spacing:-.035em;margin:0 0 10px;line-height:1.17}
+#como .learning-step p{font-size:14px;line-height:1.63;color:#59677e;margin:0 0 18px}
+.learning-action{margin-top:auto;color:#2251a7;font-size:13px;font-weight:800}
+#ejes .axis-instruction{display:inline-flex;max-width:none;background:#f0f5ff;border-left:4px solid #2858b6;border-radius:10px;padding:12px 16px;color:#28477f;font-weight:800;font-size:15px;margin-top:14px}
+.project-integration{display:flex;gap:32px;align-items:center;justify-content:space-between;margin-top:32px;padding:28px 31px;border-radius:24px;background:#fff7de;border:1px solid #f6e4b1}
+.project-copy{max-width:690px}.project-eyebrow{font-size:11px;letter-spacing:.1em;font-weight:900;color:#835c11}.project-integration h3{margin:8px 0 12px;font-size:clamp(24px,3vw,31px);letter-spacing:-.03em;color:#253257}.project-integration p{font-size:15px;line-height:1.74;color:#515d77;margin:0}
+.project-integration .button{flex:0 0 auto;max-width:265px;white-space:normal;text-align:center;font-size:14px}
+#recursos .guide-band .button{max-width:270px;white-space:normal;text-align:center;font-size:13px}
+#ejes .axis-guide-cta .button{max-width:280px;white-space:normal;text-align:center;font-size:13px}
+@media(max-width:1080px){#como .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#como .learning-step{min-height:260px}.project-integration{flex-wrap:wrap}.project-integration .button{max-width:none}}
+@media(max-width:720px){main>#como{padding:63px 0}#como .feature-grid{gap:12px}#como .learning-step{min-height:255px;padding:19px 16px}.learning-icon{width:62px;height:62px;font-size:33px}#como .learning-step h3{font-size:20px}#como .learning-step p{font-size:14px}.project-integration{padding:23px 20px;gap:19px}.project-integration .button{width:100%}#ejes .axis-instruction{font-size:14px}#ejes .axis-guide-cta .button,#recursos .guide-band .button{max-width:none}}
+@media(max-width:470px){#como .feature-grid{grid-template-columns:1fr}#como .learning-step{min-height:0}#como .learning-step p{margin-bottom:11px}.learning-icon{margin:13px 0}}
+@media(prefers-reduced-motion:reduce){#como .learning-step:hover{transform:none}}
