@@ -1,5 +1,5 @@
 (function(){
-const guide='/orientaciones.html';
+const guide='/guia-orientaciones.pdf';
 document.querySelector('.hero-guide-link')?.remove();
 const overview=document.getElementById('como');
 if(overview){
@@ -34,4 +34,12 @@ if(resources){
  const guideButton=resources.querySelector('.guide-band a');
  if(guideButton){guideButton.href=guide;guideButton.textContent='Consultar guía de orientaciones de la propuesta →'}
 }
+
+const rutaTip=document.querySelector('#ruta .container');
+if(rutaTip&&!rutaTip.querySelector('.tip-artwork')){
+const tip=document.createElement('figure');tip.className='tip-artwork';
+tip.innerHTML='<img src="/tip-socioemocional.png" width="677" height="170" loading="lazy" alt="Tip socioemocional: Cuando un problema no sale como esperábamos, podemos detenernos, revisar y buscar otra estrategia."><figcaption>Ejemplo de tip socioemocional tomado de la guía de orientaciones, página 52.</figcaption>';
+rutaTip.appendChild(tip);
+}
+document.querySelectorAll('a[href="/guia-orientaciones.pdf"]').forEach(a=>{a.setAttribute('target','_blank');a.setAttribute('rel','noopener noreferrer');});
 })();
