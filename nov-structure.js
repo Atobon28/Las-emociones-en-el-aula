@@ -5,7 +5,7 @@ if(hero){
  const lead=hero.querySelector('.lead');if(lead)lead.textContent='Esta propuesta de diseño curricular fortalece la educación socioemocional mediante la integración de cinco ejes en las diferentes áreas del conocimiento. Descubre cómo llevarlos a tus clases sin añadir actividades aisladas.';
  const actions=hero.querySelector('.hero-actions');
  if(actions){const first=actions.querySelector('a');if(first){first.href='#ejes';first.textContent='Conocer los cinco ejes →'}const second=actions.querySelectorAll('a')[1];if(second){second.href='#explorar';second.textContent='Explorar por grado y área';}}
- const extra=document.createElement('a');extra.className='hero-guide-link';extra.href='/orientaciones.html';extra.textContent='Consultar la guía de orientaciones →';
+ const extra=document.createElement('a');extra.className='hero-guide-link';extra.href='/guia-orientaciones.pdf';extra.textContent='Consultar la guía de orientaciones →';
  hero.querySelector('.hero-small')?.before(extra);
 }
 const intro=document.querySelector('#introduccion .container');
@@ -14,7 +14,7 @@ if(intro){
 }
 const axes=document.getElementById('ejes');
 if(axes){
- const tail=axes.querySelector('.container');const bar=document.createElement('div');bar.className='axis-guide-cta';bar.innerHTML='<div><strong>¿Quieres profundizar?</strong><p>Explora la guía de orientaciones pedagógicas de esta propuesta.</p></div><a class="button" href="/orientaciones.html">Consultar guía →</a>';tail?.append(bar);
+ const tail=axes.querySelector('.container');const bar=document.createElement('div');bar.className='axis-guide-cta';bar.innerHTML='<div><strong>¿Quieres profundizar?</strong><p>Explora la guía de orientaciones pedagógicas de esta propuesta.</p></div><a class="button" href="/guia-orientaciones.pdf">Consultar guía →</a>';tail?.append(bar);
  const buttons=axes.querySelectorAll('button.axis');buttons.forEach((b,i)=>{b.setAttribute('aria-pressed',String(b.classList.contains('active')));b.setAttribute('aria-label','Leer definición ampliada del eje '+(i+1));b.addEventListener('click',()=>buttons.forEach(x=>x.setAttribute('aria-pressed',String(x.classList.contains('active')))))});
 }
 const ruta=document.getElementById('ruta');if(ruta){const kicker=ruta.querySelector('.section-head .kicker');if(kicker)kicker.textContent='DESPUÉS DE EXPLORAR LAS ORIENTACIONES';const title=ruta.querySelector('.section-head h2');if(title)title.textContent='Cinco pasos para llevarlo a tu aula.';const text=ruta.querySelector('.section-head p');if(text)text.textContent='Una vez hayas explorado las orientaciones, sigue esta ruta flexible para integrar el aprendizaje socioemocional a tus clases sin reemplazar el propósito de la materia.';}
